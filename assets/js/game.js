@@ -86,7 +86,7 @@ var fight = function(enemyName) {
 // generate random damage value based on player's attack power
 var damage = randomNumber(playerAttack - 3, playerAttack);
 
-enemyHealth = Math.max(0, enemyHealth - damage);
+enemyHealth = Math.max(0, enemyHealth - playerAttack);
     console.log(
       playerName + ' attacked ' + enemyName + '. ' + enemyName + ' now has ' + enemyHealth + ' health remaining.'
     );
@@ -115,7 +115,7 @@ enemyHealth = Math.max(0, enemyHealth - damage);
     // remove players's health by subtracting the amount set in the enemyAttack variable
     var damage = randomNumber(enemyAttack - 3, enemyAttack);
 
-    playerHealth = Math.max(0, playerHealth - damage);
+    playerHealth = Math.max(0, playerHealth - enemyAttack);
     console.log(
       enemyName + ' attacked ' + playerName + '. ' + playerName + ' now has ' + playerHealth + ' health remaining.'
     );
